@@ -1,48 +1,53 @@
-# 🧩 Stark Labs – Project JSON Panel
+# 🎉 Stark Labs – Event JSON Panel
 
-This is a lightweight and responsive admin interface built with **HTML + TailwindCSS** that allows Stark Labs team members to quickly create and export **JSON data for 3D printing projects**.
+A mini dashboard UI to create and manage **event offers** for Stark Labs, with auto JSON generation for limited-time promotions and campaigns.
 
-## ✨ Features
+## ⚙️ Built With
 
-- Generate structured JSON files for each project.
-- Auto-pathing for thumbnails, images, and STL files.
-- Live JSON preview and copy-to-clipboard support.
-- Dark mode ready.
-- Built using TailwindCSS.
+- HTML5 + TailwindCSS
+- Pure Vanilla JavaScript
+- Mobile responsive layout
+- Dark mode supported
+
+## 🛠 Features
+
+- Input form for:
+  - Event title
+  - Description
+  - Discount
+  - Start/End Dates
+  - Tag system (comma-separated)
+- Image path auto-suggestion via ID
+- Real-time preview of output JSON
+- Easy copy & paste
 
 ## 📁 Folder Structure
 ```
-project-json-panel/
+event-json-panel/
 ├── index.html
-├── /gallery/
-│ └── project-id/
-│ ├── 1.jpg
-│ ├── 2.jpg
-│ └── model.stl
+├── /events/
+│ └── event-id/
+│ └── 1.png
 ```
 
-## 🧠 Data Fields
+## 📊 Event JSON Fields
 
-| Field        | Description                      |
-|--------------|----------------------------------|
-| id           | Project folder name              |
-| title        | Project title                    |
-| material     | Type of filament used            |
-| weight       | Weight in grams                  |
-| resolution   | Layer height (e.g., 0.2mm)       |
-| price        | Price in EGP                     |
-| printTime    | Estimated print duration         |
-| designLink   | (Optional) Internal reference    |
-| likes        | Like count (default: 125)        |
-| description  | Short project description        |
-| thumbnail    | Auto-generated from `id`         |
-| model        | Auto path to `.stl` file         |
-| images       | Array of image paths             |
-| tags         | Can be extended (default empty)  |
+| Field       | Description                        |
+|-------------|------------------------------------|
+| id          | Event folder name (e.g., `event-1`)|
+| title       | Title of the event                 |
+| description | Event description text            |
+| discount    | e.g., "15%" or numeric             |
+| from        | Start date in ISO format           |
+| to          | End date in ISO format             |
+| image       | Auto path (e.g., `events/id/1.png`)|
+| tags        | Comma-separated, optional tags     |
 
-## 🚀 Getting Started
+## 🚀 How to Use
 
-Just open `index.html` in a browser. No backend or build steps needed.
+1. Fill the event form.
+2. Click **Generate JSON**.
+3. Copy the output and paste it into your data file.
 
 ---
 
